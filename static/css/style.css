@@ -1,0 +1,182 @@
+.footer {
+    background-color: rgb(255, 255, 255);
+}
+.kutu{width: 700px;
+    height: 900px;
+    padding: 20px;
+    border: 1px solid rgb(0, 0, 0);
+    margin: auto;
+    position: relative;
+
+}
+.kutu2{width: 600px;
+    height: 220px;
+    padding: 20px;
+    border: 1px solid rgb(0, 0, 0);
+    margin: auto;
+    position: relative;
+}
+.kutu3{width: 600px;
+    height: 100px;
+    padding: 20px;
+    border: 1px solid rgb(0, 0, 0);
+    position: relative;
+    margin: auto;
+}
+.kutu4{width: 600px;
+    height: 300px;
+    padding: 20px;
+    border: 3px solid rgb(219, 129, 129);
+    position: relative;
+    margin: auto;
+}
+.kutu5{width: 600px;
+    height: 100px;
+    padding: 20px;
+    border: 1px solid rgb(0, 0, 0);
+    position: relative;
+    margin: auto;
+}
+.button{
+
+    background-color: #7a7a7a;
+
+    border: none;
+
+    color: white;
+
+    padding: 15px 20px;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    display: inline-block;
+
+    font-size: 16px;
+
+    margin: 4px 45px;
+
+    cursor: pointer;
+
+}
+fieldset {
+    border:2px #000;
+}
+#info-block section {
+    border: 2px solid black;
+}
+
+.file-marker > div {
+    padding: 0 3px;
+    height: 100px;
+    margin-top: -0.8em;
+    
+}
+.file-markersaat > div {
+    padding: 0 3px;
+    height: 600px;
+    margin-top: -0.8em;
+    
+}
+.file-markermelo> div {
+    padding: 0 3px;
+    height: 130px;
+    margin-top: -0.8em;
+    
+}
+.box-title {
+    background: white none repeat scroll 0 0;
+    display: inline-block;
+    padding: 0 2px;
+    margin-left: 2em;
+}
+input[type='number']{
+    width: 40px;
+    position: relative;
+} 
+.textbox1{
+    width: 130px;
+    padding: 1px 5px;
+    margin-bottom: top 2px;;
+    margin-left: 1em;
+    margin: 1px 10px 10px 10px;
+
+}
+.buttontm{
+
+    background-color: #7a7a7a;
+
+    border: none;
+
+    color: white;
+
+    padding: 15px 20px;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    display: inline-block;
+
+    font-size: 16px;
+
+    margin: 2px 45px;
+
+    cursor: pointer;
+
+    position: relative;
+
+    margin-left: 5em;
+}
+.sesd{
+    padding: 1 10px;
+    margin-left: 1em;
+
+}
+.sessa{
+    padding: 1px 1px;
+    margin-bottom: 10px;
+    margin-left: 4em;
+
+
+}
+.yazi{
+    padding-left: 115px;
+}
+.buttonx{
+
+    background-color: #7a7a7a;
+
+    border: none;
+
+    color: white;
+
+    padding: 5px 30px;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    display: inline-block;
+
+    font-size: 16px;
+
+    margin: 2px 15px;
+
+    cursor: pointer;
+
+    position: absolute;
+    top: 30px;
+    left: 15px;
+
+    margin-left: 33em;
+}
+#vehicle1{
+    margin-left: 1em;
+
+}
+#vehicle2{
+    margin-left: 1em;
+
+}

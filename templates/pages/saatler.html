@@ -1,0 +1,47 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="kutu">
+    <aside id="info-block">
+        <section class="file-markersaat">
+          <div>
+            <div class="box-title">
+              Hemen Zil Çal
+            </div>
+            <div class="box-contents"><br>
+                <b class="yazi">Öğrenci Zili</b><b class="yazi">Öğretmen Zili</b> <b class="yazi">Çıkış Zili</b><br><br>
+                &nbsp;1.Ders :<input class="sessa" type="time" name="zaman" value="08:00">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="sessa" type="time" name="zaman" value="08:00">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="sessa" type="time" name="zaman" value="08:00"><br>
+                &nbsp;2.Ders :<input class="sessa" type="time" name="zaman" value="09:00">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="sessa" type="time" name="zaman" value="09:00">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="sessa" type="time" name="zaman" value="09:00"><br>
+                &nbsp;3.Ders :<input class="sessa" type="time" name="zaman" value="10:00">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="sessa" type="time" name="zaman" value="10:00">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="sessa" type="time" name="zaman" value="10:00"><br>
+                &nbsp;4.Ders :<input class="sessa" type="time" name="zaman" value="11:00">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="sessa" type="time" name="zaman" value="11:00">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="sessa" type="time" name="zaman" value="11:00"><br>
+                &nbsp;5.Ders :<input class="sessa" type="time" name="zaman" value="12:00">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="sessa" type="time" name="zaman" value="12:00">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="sessa" type="time" name="zaman" value="12:00"><br>
+                &nbsp;6.Ders :<input class="sessa" type="time" name="zaman" value="13:00">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="sessa" type="time" name="zaman" value="13:00">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="sessa" type="time" name="zaman" value="13:00"><br>
+                &nbsp;7.Ders :<input class="sessa" type="time" name="zaman" value="14:00">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="sessa" type="time" name="zaman" value="14:00">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="sessa" type="time" name="zaman" value="14:00"><br>
+                &nbsp;8.Ders :<input class="sessa" type="time" name="zaman" value="15:00">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="sessa" type="time" name="zaman" value="15:00">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="sessa" type="time" name="zaman" value="15:00"><br>
+                &nbsp;9.Ders :<input class="sessa" type="time" name="zaman" value="16:00">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="sessa" type="time" name="zaman" value="16:00">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="sessa" type="time" name="zaman" value="16:00"><br>
+                10.Ders:<input class="sessa" type="time" name="zaman" value="17:00">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="sessa" type="time" name="zaman" value="17:00">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="sessa" type="time" name="zaman" value="17:00"><br>
+                <br><button input type="button" class="button" style="padding: 5px 30px;position: absolute;top: 550px;right: 1px;">Tamam</button>  
+
+            </div>
+          </div>
+        </section>
+      </aside>
+      <br>
+      <div class="kutu2">
+        <p>Durum</p>
+        <div class="progress">
+          <div class="progress-bar" style="width:50%"></div>
+       </div><br>
+       <p>Ses Düzeyi</p>
+       <input type="range" value="24" min="1" max="100" style="width: 330px" oninput="this.nextElementSibling.value = this.value">
+       <output>24</output>
+       <button input type="button" class="button">Tamam</button>  
+        </div>
+
+</div>
+
+{% endblock %}
+
+

@@ -1,0 +1,103 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="kutu">
+
+  <aside id="info-block">
+    <section class="file-marker">
+      <div>
+        <div class="box-title">
+          Hemen Çal
+        </div>
+        <div class="box-contents">
+          <div id="audit-trail">
+             <button input type="button" class="button">Öğrenci Zili</button>
+             <button input type="button" class="button">Öğretmen Zili</button> 
+             <button input type="button" class="button">Çıkış Zili</button>  
+          </div>
+        </div>
+      </div>
+    </section>
+  </aside>
+  <br>
+  <aside id="info-block">
+    <section class="file-marker">
+      <div>
+        <div class="box-title">
+          İstiklal Marşı
+        </div>
+        <div class="box-contents">
+          <div id="audit-trail">
+            <select class="textbox1" name="hemen" size="1">
+            <option value="1">Hemen</option>
+            <option value="2">Sonra</option>
+            </select>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ses Düzeyi :  <input class="sesd" size="1" type="number" required>
+            <button input type="button" class="buttontm">Tamam</button>  
+          </div>
+        </div>
+      </div>
+    </section>
+  </aside>
+  <br>
+  <aside id="info-block">
+    <section class="file-marker">
+      <div>
+        <div class="box-title">
+          Saygı Duruşu Ve İstiklal Marşı
+        </div>
+        <div class="box-contents">
+          <div id="audit-trail">
+            <select class="textbox1" name="hemen" size="1">
+            <option value="1">Hemen</option>
+            <option value="2">Sonra</option>
+            </select>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ses Düzeyi :  <input class="sesd" size="1" type="number" required>
+            <button input type="button" class="buttontm">Tamam</button>  
+          </div>
+        </div>
+      </div>
+    </section>
+  </aside>
+  <br>
+  <aside id="info-block">
+    <section class="file-marker">
+      <div>
+        <div class="box-title">
+          Siren
+        </div>
+        <div class="box-contents">
+          <div id="audit-trail">
+            <select class="textbox1" name="hemen" size="1">
+            <option value="1">Hemen</option>
+            <option value="2">Sonra</option>
+            </select>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ses Düzeyi :  <input class="sesd" size="1" type="number" required>
+            <button input type="button" class="buttontm">Tamam</button>  
+          </div>
+        </div>
+      </div>
+    </section>
+  </aside>
+  <br><br><br><br><br>
+  <div class="kutu2">
+  <p>Durum</p>
+  <div class="progress">
+    <div class="progress-bar" style="width:50%"></div>
+ </div><br>
+ <p>Ses Düzeyi</p>
+ <input type="range" value="24" min="1" max="100" style="width: 330px" oninput="this.nextElementSibling.value = this.value">
+ <output>24</output>
+ <button input type="button" class="button">Tamam</button>  
+  </div>
+
+
+
+ 
+</div>
+
+{% endblock %}
+
+
