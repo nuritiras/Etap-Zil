@@ -1,26 +1,5 @@
 # PARDUS ETAP İÇİN OKUL ZİLİ VE DUYURU SİSTEMİ
 
-Django Dökümanlardan:
-
-**Tablo görünümü için**
-
-https://django-tables2.readthedocs.io/en/latest/pages/tutorial.html
-
-**Form için**
-
-https://docs.djangoproject.com/en/3.1/ref/forms/
-
-_**Tasarım Raporu:**_ https://
-
-_**Analiz Raporu:**_ https://
-
-_**Gerçekleştirme Raporu :**_ https://
-
-_**Test Raporu :**_ https://
-
-_**Sunum :**_ https://
-
-
 **PROJE AMACI:**
 
  Hayatın her alanında her gün yeni fonksiyonlarla karşımız çıkan teknoloji, hayatı kolaylaştırıp güncel yaşamın yoğunluğunda işlerin olabildiğince pratik olmasını sağlamaktadır. Bizler de okulumuzda bu anlamda zil sistemiyle ilgili yapabileceklerimizi düşündük ve belirli kişilere yetki verildiği takdirde herhangi bir cihazdan kontrol edilmesi mümkün olan zil ve duyuru otomasyonunu gerçekleştirmeyi amaçladık.
