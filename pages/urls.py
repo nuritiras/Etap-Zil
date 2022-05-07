@@ -9,6 +9,4 @@ urlpatterns = [
     path('saatler', views.saatler, name='saatler'), 
     path('meolodiler', views.melodiler, name='melodiler'),
     path('duyuru', views.duyuru, name='duyuru'),
-
-
 ]

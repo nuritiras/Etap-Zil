@@ -1,10 +1,7 @@
-from trace import Trace
 from django.db import models
 
 # Create your models here.
 
-class okulzili(models.Model):
-
-    name = models.TimeField(verbose_name='Toplanma Saati')
-    description = models.TimeField(verbose_name='Eklenme Saati')
-    isPublished = models.BooleanField(default=True)
+class DuyuruModel(models.Model):
+    title=models.CharField(max_length=50,verbose_name="Başlık Bilgisi",null=False,blank=False)
+    description=models.TextField(max_length=500,verbose_name="İçerik Bilgisi",null=False,blank=False)

@@ -19,7 +19,7 @@ from django.urls import path,include
 # http://127.0.0.1:8000/admin
 
 urlpatterns = [
-    path('', include('user.urls')),
+    path('', include('pages.urls')),
     path('home', include('pages.urls')),
     path('user/', include('user.urls')),
     path('admin/', admin.site.urls),

@@ -1,10 +1,10 @@
 from multiprocessing import context
 from django.shortcuts import render
 from django.http import HttpResponse
-from okulzili.models import okulzili
+from okulzili.models import DuyuruModel
 
 def index(request):
-    okulzilis = okulzili.objects.all()
+    okulzilis = DuyuruModel.objects.all()
 
 # Create your views here.
 # http://127.0.0.1:8000/

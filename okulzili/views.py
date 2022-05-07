@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import okulzili
+from .models import DuyuruModel
 
 # Create your views here.
 
