@@ -7,7 +7,7 @@
 **PROJE YÖNTEMİ:**
  Bu proje için öncelikle benzer uygulamalar ve işleyiş şekilleri incelenecektir. Sonrasında okul içindeki ağdan, herhangi bir cihaz üzerinden web arayüzüne giriş için bir web sayfası yapılacaktır. Güvenlik, mobil sistem üzerinden kontrol ve kumanda, veri yükleme ve girilen duyuru metinlerinin Google API?yle sese dönüştürülmesi gibi özellikler sağlanacaktır. Bunlar için donanım olarak Pardus ETAP kurulu akıllı tahta, programlama için Python, Django, veritabanı için SQLite3, arayüz tasarımı için HTML, CSS, JavaScript, python modülleri için de gTTS, playsound, os, system kullanılacaktır.
 
-**BEKLENEN SONUC:** 
+**BEKLENEN SONUÇ:** 
 Mevcut zil ve duyuru sistemlerinin, teknolojinin hızına ayak uydurması şeklinde tanımlanabilecek olan bu proje,okulumuz zil ve duyuru sisteminin daha etkili ve pratik kullanımını sağlayacaktır. Milli Eğitim Bakanlığı?na bağlı okullar ve ETAP kurulmuş akıllı tahtalara kurulumlar yapıldığı takdirde tüm okullar da GitHub?da açık kaynak olarak dağıtılacak olan bu yazılımdan faydalanabileceklerdir. İstenildiği takdirde diğer resmi kurumlar ve işyerleri için de uyarlanabileceğinin imkanı gösterilecektir.
 
 **GÖREV DAĞILIMI:**
