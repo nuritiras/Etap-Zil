@@ -13,50 +13,51 @@
                  >
                      <a href="{% url 'index' %}" class="nav-link">Anasayfa</a>
                  </li>
-                 <li 
-                    {% if 'hemencal' in request.path %}
-                    class="nav-item active"
-                    {% else %}
-                    class="nav-item "
-                    {% endif %}
-
-                 >
-                     <a href="{% url 'hemencal' %}" class="nav-link">Hemen Çal</a>
-                 </li>
-                 <li 
-                    {% if 'saatler' in request.path %}
-                    class="nav-item active"
-                    {% else %}
-                    class="nav-item "
-                    {% endif %}
-
-                >
-                  <a href="{% url 'saatler' %}" class="nav-link">Saatler</a>
-                </li>
-                    <li 
-                    {% if 'melodiler' in request.path %}
-                    class="nav-item active"
-                    {% else %}
-                    class="nav-item "
-                    {% endif %}
-
-                 >
-                <a href="{% url 'melodiler' %}" class="nav-link">Melodiler</a>
-                 </li>
-                 <li 
-                    {% if 'duyurular' in request.path %}
-                    class="nav-item active"
-                    {% else %}
-                    class="nav-item "
-                    {% endif %}
-
-                >
-                  <a href="{% url 'duyuru' %}" class="nav-link">Duyuru</a>
-              </li>
+                 
              </ul>
              <ul class="navbar-nav">
 
-                {% if user.is_authenticated %}    
+                {% if user.is_authenticated %}
+                <li 
+                {% if 'hemencal' in request.path %}
+                class="nav-item active"
+                {% else %}
+                class="nav-item "
+                {% endif %}
+
+             >
+                 <a href="{% url 'hemencal' %}" class="nav-link">Hemen Çal</a>
+             </li>
+             <li 
+                {% if 'saatler' in request.path %}
+                class="nav-item active"
+                {% else %}
+                class="nav-item "
+                {% endif %}
+
+            >
+              <a href="{% url 'saatler' %}" class="nav-link">Saatler</a>
+            </li>
+                <li 
+                {% if 'melodiler' in request.path %}
+                class="nav-item active"
+                {% else %}
+                class="nav-item "
+                {% endif %}
+
+             >
+            <a href="{% url 'melodiler' %}" class="nav-link">Melodiler</a>
+             </li>
+             <li 
+                {% if 'duyurular' in request.path %}
+                class="nav-item active"
+                {% else %}
+                class="nav-item "
+                {% endif %}
+
+            >
+              <a href="{% url 'duyuru' %}" class="nav-link">Duyuru</a>
+          </li>    
                     <li class="nav-item">
                          <a  href="javascript:{document.getElementById('logout').submit()}" class="nav-link">{{ user.username }} -- Çıkış Yap</a>
                          <form action="{% url 'logout' %}" method="POST" id="logout">
