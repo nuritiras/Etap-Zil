@@ -3,11 +3,15 @@
 
 {% block content %}
 
-<textarea id="w3review" name="w3review" rows="10" cols="75">
+<form action = "" method = "POST">
+  {% csrf_token %}
+  <textarea id="mesaj" name="mesaj" rows="10" cols="75">
   </textarea>
   <br><br>
-  <input type="submit" value="Mesajı İlet">
+  <input type="submit" value="Mesajı Oku">
+</form>
 
 {% endblock %}
+
 
 

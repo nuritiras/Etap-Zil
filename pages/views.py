@@ -2,6 +2,8 @@ from multiprocessing import context
 from django.shortcuts import render
 from django.http import HttpResponse
 from okulzili.models import DuyuruModel
+from gtts import gTTS
+from playsound import playsound
 
 def index(request):
     okulzilis = DuyuruModel.objects.all()
@@ -22,4 +24,9 @@ def melodiler(request):
     return render(request,'pages/melodiler.html')
 
 def duyuru(request):
+    metin=request.POST.get('mesaj',False)
+    if metin:
+        speech=gTTS(text=metin,lang='tr', slow=False)
+        speech.save("duyuru.mp3")
+        playsound("duyuru.mp3")
     return render(request,'pages/duyuru.html')
