@@ -24,9 +24,12 @@ def melodiler(request):
     return render(request,'pages/melodiler.html')
 
 def duyuru(request):
+    data = {
+        "DuyuruMesaj": DuyuruModel.objects.get(id=1)
+    }
     metin=request.POST.get('mesaj',False)
     if metin:
         speech=gTTS(text=metin,lang='tr', slow=False)
         speech.save("duyuru.mp3")
         playsound("duyuru.mp3")
-    return render(request,'pages/duyuru.html')
+    return render(request,'pages/duyuru.html',data)
