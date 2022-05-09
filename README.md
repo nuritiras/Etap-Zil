@@ -15,3 +15,5 @@ Mevcut zil ve duyuru sistemlerinin, teknolojinin hızına ayak uydurması şekli
 **Danışman Öğretmen:** Nuri TIRAŞ
 
 **Öğrenciler:** Adem KARPUZ, Metehan GÖKYOKUŞ, Ali Nail ACAR
+
+**Kurulum:** pip install -r requirements.txt 

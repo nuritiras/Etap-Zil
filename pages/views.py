@@ -25,7 +25,7 @@ def melodiler(request):
 
 def duyuru(request):
     data = {
-        "DuyuruMesaj": DuyuruModel.objects.get(id=1)
+        "DuyuruMesaj": DuyuruModel.objects.get(id=2)
     }
     metin=request.POST.get('mesaj',False)
     if metin:
