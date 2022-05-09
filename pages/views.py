@@ -1,4 +1,5 @@
 from multiprocessing import context
+import multiprocessing
 from django.shortcuts import render
 from django.http import HttpResponse
 from okulzili.models import DuyuruModel
@@ -35,6 +36,10 @@ def duyuru(request):
     return render(request,'pages/duyuru.html',data)
 
 def ogrencizilical(request):
+    playsound("static/muzik/Ses/muzik1.mp3")
+    return render(request,'pages/hemencal.html')
+    
+def durdur(request):
     playsound("static/muzik/Ses/muzik1.mp3")
     return render(request,'pages/hemencal.html')
 
