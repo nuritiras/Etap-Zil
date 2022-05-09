@@ -25,7 +25,7 @@ def melodiler(request):
 
 def duyuru(request):
     data = {
-        "DuyuruMesaj": DuyuruModel.objects.get(id=2)
+        "DuyuruMesaj": DuyuruModel.objects.get(id=1)
     }
     metin=request.POST.get('mesaj',False)
     if metin:
@@ -33,3 +33,31 @@ def duyuru(request):
         speech.save("duyuru.mp3")
         playsound("duyuru.mp3")
     return render(request,'pages/duyuru.html',data)
+
+def ogrencizilical(request):
+    playsound("static/muzik/Ses/muzik1.mp3")
+    return render(request,'pages/hemencal.html')
+
+def ogretmenzilical(request):
+    playsound("static/muzik/Ses/muzik2.mp3")
+    return render(request,'pages/hemencal.html')
+
+def cikiszili(request):
+    playsound("static/muzik/Ses/muzik3.mp3")
+    return render(request,'pages/hemencal.html')
+
+def istiklalmarsi(request):
+    playsound("static/muzik/Resmi/istiklalmarsi.mp3")
+    return render(request,'pages/hemencal.html')
+
+def saygidurusu1(request):
+    playsound("static/muzik/Resmi/saygi1dakika-istiklalmarsi.mp3")
+    return render(request,'pages/hemencal.html')
+
+def saygidurusu2(request):
+    playsound("static/muzik/Resmi/saygi2dakika-istiklalmarsi.mp3")
+    return render(request,'pages/hemencal.html')
+
+def siren(request):
+    playsound("static/muzik/Resmi/siren30saniye.mp3")
+    return render(request,'pages/hemencal.html')
