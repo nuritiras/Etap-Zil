@@ -16,4 +16,8 @@ Mevcut zil ve duyuru sistemlerinin, teknolojinin hızına ayak uydurması şekli
 
 **Öğrenciler:** Adem KARPUZ, Metehan GÖKYOKUŞ, Ali Nail ACAR
 
-**Kurulum:** pip install -r requirements.txt 
+**Kurulum:** pip install -r requirements.txt
+
+https://gonullu.pardus.org.tr/pardus-21de-vscode-ile-python-gelistirme-ortaminin-hazirlanmasi/
+
+https://gonullu.pardus.org.tr/pardus-21-ile-python-django-kutuphanesine-giris/
