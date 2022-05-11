@@ -26,14 +26,20 @@ def melodiler(request):
 
 def duyuru(request):
     data = {
-        "DuyuruMesaj": DuyuruModel.objects.get(id=1)
+        "DuyuruMesaj": DuyuruModel.objects.all()
+    }
+    return render(request,'pages/duyuru.html',data)
+
+def duyurudetails(request, id):
+    data = {
+        "DuyuruMesaj": DuyuruModel.objects.get(id=id)
     }
     metin=request.POST.get('mesaj',False)
     if metin:
         speech=gTTS(text=metin,lang='tr', slow=False)
         speech.save("duyuru.mp3")
         playsound("duyuru.mp3")
-    return render(request,'pages/duyuru.html',data)
+    return render(request, "details.html", data)
 
 def ogrencizilical(request):
     playsound("static/muzik/Ses/muzik1.mp3")

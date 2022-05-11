@@ -9,6 +9,7 @@ urlpatterns = [
     path('saatler', views.saatler, name='saatler'), 
     path('meolodiler', views.melodiler, name='melodiler'),
     path('duyuru', views.duyuru, name='duyuru'),
+    path('duyuru/<int:id>', views.duyurudetails, name='details'),
     path('ogrencizilical', views.ogrencizilical, name='ogrencizilical'),
     path('ogretmenzilical', views.ogretmenzilical, name='ogretmenzilical'),
     path('cikiszili', views.cikiszili, name='cikiszili'),

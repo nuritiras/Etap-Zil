@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block content %}
+
+<form action = "" method = "POST">
+  {% csrf_token %}
+  <textarea id="mesaj" name="mesaj" rows="10" cols="75">
+    {{ DuyuruMesaj.description }}
+  </textarea>
+  <br><br>
+  <input type="submit" value="Duyuru Yap">
+</form>
+
+{% endblock %}
+
+
+
