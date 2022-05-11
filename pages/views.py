@@ -4,7 +4,9 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from okulzili.models import DuyuruModel
 from gtts import gTTS
-from playsound import playsound
+from pygame import mixer
+
+mixer.init()
 
 def index(request):
     okulzilis = DuyuruModel.objects.all()
@@ -42,33 +44,47 @@ def duyurudetails(request, id):
     return render(request, "details.html", data)
 
 def ogrencizilical(request):
-    playsound("static/muzik/Ses/muzik1.mp3")
+    mixer.music.load("static/muzik/Ses/muzik1.mp3") 
+    mixer.music.set_volume(0.1)
+    mixer.music.play()
     return render(request,'pages/hemencal.html')
     
 def durdur(request):
-    playsound("static/muzik/Ses/muzik1.mp3")
+    mixer.music.stop()
     return render(request,'pages/hemencal.html')
 
 def ogretmenzilical(request):
-    playsound("static/muzik/Ses/muzik2.mp3")
+    mixer.music.load("static/muzik/Ses/muzik2.mp3") 
+    mixer.music.set_volume(0.1)
+    mixer.music.play()
     return render(request,'pages/hemencal.html')
 
 def cikiszili(request):
-    playsound("static/muzik/Ses/muzik3.mp3")
+    mixer.music.load("static/muzik/Ses/muzik3.mp3") 
+    mixer.music.set_volume(0.1)
+    mixer.music.play()
     return render(request,'pages/hemencal.html')
 
 def istiklalmarsi(request):
-    playsound("static/muzik/Resmi/istiklalmarsi.mp3")
+    mixer.music.load("static/muzik/Resmi/istiklalmarsi.mp3") 
+    mixer.music.set_volume(0.1)
+    mixer.music.play()
     return render(request,'pages/hemencal.html')
 
 def saygidurusu1(request):
-    playsound("static/muzik/Resmi/saygi1dakika-istiklalmarsi.mp3")
+    mixer.music.load("static/muzik/Resmi/saygi1dakika-istiklalmarsi.mp3") 
+    mixer.music.set_volume(0.1)
+    mixer.music.play()
     return render(request,'pages/hemencal.html')
 
 def saygidurusu2(request):
-    playsound("static/muzik/Resmi/saygi2dakika-istiklalmarsi.mp3")
+    mixer.music.load("static/muzik/Resmi/saygi2dakika-istiklalmarsi.mp3") 
+    mixer.music.set_volume(0.1)
+    mixer.music.play()
     return render(request,'pages/hemencal.html')
 
 def siren(request):
-    playsound("static/muzik/Resmi/siren30saniye.mp3")
+    mixer.music.load("static/muzik/Resmi/siren30saniye.mp3") 
+    mixer.music.set_volume(0.1)
+    mixer.music.play()
     return render(request,'pages/hemencal.html')
