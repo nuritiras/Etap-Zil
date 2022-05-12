@@ -2,7 +2,7 @@
     background-color: rgb(255, 255, 255);
 }
 .kutu{width: 700px;
-    height: 900px;
+    height: 1000px;
     padding: 20px;
     border: 1px solid rgb(0, 0, 0);
     margin: auto;
@@ -75,7 +75,7 @@ fieldset {
 }
 .file-markersaat > div {
     padding: 0 3px;
-    height: 600px;
+    height: 710px;
     margin-top: -0.8em;
     
 }
