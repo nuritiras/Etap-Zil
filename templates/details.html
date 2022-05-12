@@ -2,21 +2,32 @@
 {% load static %}
 
 {% block content %}
-
+<div class="row">
+  <div class="col-md-6 mx-auto">
+      <div class="card">
+          <div class="card-header bg-dark text-white">
+              <h4>Duyuru Yap</h4>
+          </div>
+          <div class="card-body">
 <form action = "" method = "POST">
   {% csrf_token %}
   <label for="baslik"> Duyuru Konusu: {{ DuyuruMesaj.title }} </label> <br>
-  <textarea id="mesaj" name="mesaj" rows="10" cols="75">
+  <textarea id="mesaj" name="mesaj" rows="10" cols="51">
     {{ DuyuruMesaj.description }}
   </textarea>
   <br><br>
-  <input type="submit" value="Duyuru Yap">
+  <button type="submit" class="btn btn-dark btn-block">Duyuru Yap</button>
+
   <br><br>
   <label for="vehicle1"> Ses Düzeyi </label><br>
        <input type="range" value="24" min="1" max="100" style="width: 330px" oninput="this.nextElementSibling.value = this.value">
        <output>24</output>
   
 </form>
+</div>
+</div>
+</div>
+</div
 
 {% endblock %}
 
