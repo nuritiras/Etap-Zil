@@ -15,9 +15,11 @@
                 <option value=1>Melodi1.mp3</option>
                 <option value=2>Melodi2.mp3</option>
                 <select>
-            <b style=padding-left:50px>Ses Düzeyi</b><input class=sesd size=1 type=number maxlength=2 value=50 required><button input type=button class=buttonx>Tamam</button>  
+                  <b style=padding-left:30px;>Melodi Ses Dosyası: </b><input type="file" id="customFile" />   
             <br><input type=checkbox id=vehicle1 name=vehicle1 value=Bike>
-            <label for=vehicle1>Anons Kullan</label><br>
+            <label for=vehicle1>Anons Kullan</label>
+            <b style=padding-left:50px;>Anons Ses Dosyası: </b><input type="file" id="customFile" />
+            <br>
             <input type=checkbox id=vehicle2 name=vehicle2 value=Car>
             <label for=vehicle2> 1.Ders Hariç Diğerlerinde Anons Kullan<br></label>
             </div>
@@ -36,9 +38,11 @@
                  <option value=1>Melodi1.mp3</option>
                  <option value=2>Melodi2.mp3</option>
              </select>
-             <b style=padding-left:50px;>Ses Düzeyi</b><input class=sesd size=1 type=number maxlength=2 value=50 required><button input type=button class=button style="padding: 5px 30px;position: absolute;top: 175px;right: 1px;">Tamam</button> 
+             <b style=padding-left:30px;>Melodi Ses Dosyası: </b><input type="file" id="customFile" /> 
              <br><input type=checkbox id=vehicle1 name=vehicle1 value=Bike>
-             <label for=vehicle1>Anons Kullan</label><br>
+             <label for=vehicle1>Anons Kullan</label>
+             <b style=padding-left:50px;>Anons Ses Dosyası: </b><input type="file" id="customFile" />
+             <br>
              <input type=checkbox id=vehicle2 name=vehicle2 value=Car>
              <label for=vehicle2>1.Ders Hariç Diğerlerinde Anons Kullan</label><br>
             </div>
@@ -56,13 +60,13 @@
                 <option value=1>Melodi1.mp3</option>
                 <option value=2>Melodi2.mp3</option>
              </select>
-             <b style=padding-left:50px;>Ses Düzeyi</b><input class=sesd size=1 type=number maxlength=2 value=50 required><button input type=button class=button style="padding: 5px 30px;position: absolute;top: 320px;right: 1px;">Tamam</button>
+             <b style=padding-left:80px;>Ses Dosyası: </b><input type="file" id="customFile" /> 
 
             </div>
           </div>
         </section>
       </aside>
-      <br><br><br><br><br><br><br><br><br>
+      <br>
       <div class=kutu2>
         <p>Durum</p>
         <div class="progress">
@@ -71,7 +75,7 @@
        <p>Ses Düzeyi</p>
        <input type="range" value="24" min="1" max="100" style="width: 330px" oninput="this.nextElementSibling.value = this.value">
        <output>24</output>
-       <button input type="button" class="button">Tamam</button>  
+       <button input type="button" class="button">Kaydet</button>  
         </div>
 </div>
 {% endblock %}

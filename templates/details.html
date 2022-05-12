@@ -11,6 +11,11 @@
   </textarea>
   <br><br>
   <input type="submit" value="Duyuru Yap">
+  <br><br>
+  <label for="vehicle1"> Ses Düzeyi </label><br>
+       <input type="range" value="24" min="1" max="100" style="width: 330px" oninput="this.nextElementSibling.value = this.value">
+       <output>24</output>
+  
 </form>
 
 {% endblock %}

@@ -40,7 +40,10 @@ def duyurudetails(request, id):
     if metin:
         speech=gTTS(text=metin,lang='tr', slow=False)
         speech.save("duyuru.mp3")
-        playsound("duyuru.mp3")
+        mixer.music.load("duyuru.mp3") 
+        mixer.music.set_volume(0.1)
+        mixer.music.play()
+        
     return render(request, "details.html", data)
 
 def ogrencizilical(request):
