@@ -22,68 +22,72 @@ def hemencal(request):
     return render(request,'pages/hemencal.html')
 
 def saatler(request):
+    data = {
+        "girisCikisSaatleri": SaatModel.objects.all()
+    }
+
     if request.method == 'POST':
         sesseviyesi=request.POST['sesseviyesi']
         # Tören:
-        zaman0745 = request.POST['zaman0745']
-        zaman0756 = request.POST['zaman0756']
-        zaman0759 = request.POST['zaman0759']
+        zaman0745 = request.POST['zaman07:45']
+        zaman0756 = request.POST['zaman07:56']
+        zaman0759 = request.POST['zaman07:59']
         # 1. Ders:
-        zaman0757 = request.POST['zaman0757']
-        zaman0800 = request.POST['zaman0800']
-        zaman0840 = request.POST['zaman0840']
+        zaman0757 = request.POST['zaman07:57']
+        zaman0800 = request.POST['zaman08:00']
+        zaman0840 = request.POST['zaman08:40']
         # 2. Ders:
-        zaman0847 = request.POST['zaman0847']
-        zaman0850 = request.POST['zaman0850']
-        zaman0930 = request.POST['zaman0930']
+        zaman0847 = request.POST['zaman08:47']
+        zaman0850 = request.POST['zaman08:50']
+        zaman0930 = request.POST['zaman09:30']
         # 3. Ders:
-        zaman0937 = request.POST['zaman0937']
-        zaman0940 = request.POST['zaman0940']
-        zaman1020 = request.POST['zaman1020']
+        zaman0937 = request.POST['zaman09:37']
+        zaman0940 = request.POST['zaman09:40']
+        zaman1020 = request.POST['zaman10:20']
         # 4. Ders:
-        zaman1027 = request.POST['zaman1027']
-        zaman1030 = request.POST['zaman1030']
-        zaman1110 = request.POST['zaman1110']
+        zaman1027 = request.POST['zaman10:27']
+        zaman1030 = request.POST['zaman10:30']
+        zaman1110 = request.POST['zaman11:10']
         # 5. Ders:
-        zaman1117 = request.POST['zaman1117']
-        zaman1120 = request.POST['zaman1120']
-        zaman1200 = request.POST['zaman1200']
+        zaman1117 = request.POST['zaman11:17']
+        zaman1120 = request.POST['zaman11:20']
+        zaman1200 = request.POST['zaman12:00']
         # 6. Ders:
-        zaman1257 = request.POST['zaman1257']
-        zaman1300 = request.POST['zaman1300']
-        zaman1340 = request.POST['zaman1340']
+        zaman1257 = request.POST['zaman12:57']
+        zaman1300 = request.POST['zaman13:00']
+        zaman1340 = request.POST['zaman13:40']
         # 7. Ders:
-        zaman1347 = request.POST['zaman1347']
-        zaman1350 = request.POST['zaman1350']
-        zaman1430 = request.POST['zaman1430']
+        zaman1347 = request.POST['zaman13:47']
+        zaman1350 = request.POST['zaman13:50']
+        zaman1430 = request.POST['zaman14:30']
         # 8. Ders:
-        zaman1437 = request.POST['zaman1437']
-        zaman1440 = request.POST['zaman1440']
-        zaman1520 = request.POST['zaman1520']
+        zaman1437 = request.POST['zaman14:37']
+        zaman1440 = request.POST['zaman14:40']
+        zaman1520 = request.POST['zaman15:20']
         # 9. Ders:
-        zaman1527 = request.POST['zaman1527']
-        zaman1530 = request.POST['zaman1530']
-        zaman1610 = request.POST['zaman1610']
+        zaman1527 = request.POST['zaman15:27']
+        zaman1530 = request.POST['zaman15:30']
+        zaman1610 = request.POST['zaman16:10']
         # 10. Ders:
-        zaman1617 = request.POST['zaman1617']
-        zaman1620 = request.POST['zaman1620']
-        zaman1700 = request.POST['zaman1700']
+        zaman1617 = request.POST['zaman16:17']
+        zaman1620 = request.POST['zaman16:20']
+        zaman1700 = request.POST['zaman17:00']
         # 11. Ders:
-        zaman1707 = request.POST['zaman1707']
-        zaman1710 = request.POST['zaman1710']
-        zaman1750 = request.POST['zaman1750']
+        zaman1707 = request.POST['zaman17:07']
+        zaman1710 = request.POST['zaman17:10']
+        zaman1750 = request.POST['zaman17:50']
         # 12. Ders:
-        zaman1757 = request.POST['zaman1757']
-        zaman1800 = request.POST['zaman1800']
-        zaman1840 = request.POST['zaman1840']
+        zaman1757 = request.POST['zaman17:57']
+        zaman1800 = request.POST['zaman18:00']
+        zaman1840 = request.POST['zaman18:40']
         # 13. Ders:
-        zaman1847 = request.POST['zaman1847']
-        zaman1850 = request.POST['zaman1850']
-        zaman1930 = request.POST['zaman1930']
+        zaman1847 = request.POST['zaman18:47']
+        zaman1850 = request.POST['zaman18:50']
+        zaman1930 = request.POST['zaman19:30']
         # 14. Ders:
-        zaman1937 = request.POST['zaman1937']
-        zaman1940 = request.POST['zaman1940']
-        zaman2020 = request.POST['zaman2020']
+        zaman1937 = request.POST['zaman19:37']
+        zaman1940 = request.POST['zaman19:40']
+        zaman2020 = request.POST['zaman20:20']
         # veritabnı güncellemesi
         SaatModel.objects.filter(id=1).update(ogrenci=zaman0745,ogretmen=zaman0756,cikis=zaman0759,sesDuzeyi=sesseviyesi)
         SaatModel.objects.filter(id=2).update(ogrenci=zaman0757,ogretmen=zaman0800,cikis=zaman0840,sesDuzeyi=sesseviyesi)
@@ -101,7 +105,7 @@ def saatler(request):
         SaatModel.objects.filter(id=14).update(ogrenci=zaman1847,ogretmen=zaman1850,cikis=zaman1930,sesDuzeyi=sesseviyesi)
         SaatModel.objects.filter(id=15).update(ogrenci=zaman1937,ogretmen=zaman1940,cikis=zaman2020,sesDuzeyi=sesseviyesi)
         messages.add_message(request, messages.SUCCESS, 'Giriş-çıkış ders saatleri ayarlandı.')    
-    return render(request, 'pages/saatler.html')
+    return render(request, 'pages/saatler.html',data)
 
 def melodiler(request):
     return render(request,'pages/melodiler.html')
