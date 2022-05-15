@@ -2,28 +2,24 @@
 {% load static %}
 
 {% block content %}
-<div class="row">
-    <div class="col-md-6 mx-auto">
-        <div class="card">
-            <div class="card-header bg-dark text-white">
-                <h4>Kayıtlı Duyurular </h4>
-            </div>
-            <div class="card-body">
-    <div class="container mt-3">
-        <div class="row">
-            <div class="col-12">
-                <div class="list-group">
-                    {% for kategori in DuyuruMesaj %}
-                        <a href="{% url 'details' kategori.id %}" class="list-group-item list-group-item-action">
-                            {{ kategori.title }}
-                        </a>
-                    {% endfor %}
+
+<div class="card">
+    <h4 align="center" class="card-header">Kayıtlı duyuru mesalarını ses dosyasına dönüştürmek için seçim yapılır. </h4>
+    <div class="card-body">
+       
+            <div class="container mt-3">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="list-group">
+                            {% for kategori in DuyuruMesaj %}
+                                <a href="{% url 'details' kategori.id %}" class="list-group-item list-group-item-action">
+                                    {{ kategori.title }}
+                                </a>
+                            {% endfor %}
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
-</div>
-</div>
 </div
+    
 {% endblock %}

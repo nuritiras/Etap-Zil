@@ -4,81 +4,109 @@
 {% block content %}
 
 <div class="card">
-  <h1 align="center" class="card-header">Hemen Çal</h1>
+  <h4 align="center" class="card-header"> Öğrenci Zili, Öğretmen Zili ve Çıkış Zilinin hemen çalınması için kullanılır.</h4>
   <div class="card-body">
 
-    <div class="card-columns">
-      <div class="card bg-warning">
-        <div class="card-body text-center">  
-          <button input type="button" class="btn btn-primary" onclick="window.location.href ='ogrencizilical'">Öğrenci Zili</button>
+    <div class="card">
+      <div class="card-header">
+       Hemen Zil Çal
+      </div>
+      <div class="card-columns">
+        <div class="card bg-warning">
+          <div class="card-body text-center">  
+            <button input type="button" class="tn btn-primary btn-lg" onclick="window.location.href ='ogrencizilical'">Öğrenci Zili</button>
+          </div>
+        </div>
+        <div class="card bg-warning">
+          <div class="card-body text-center">
+            <button input type="button" class="tn btn-primary btn-lg" onclick="window.location.href ='ogretmenzilical'">Öğretmen Zili</button>
+          </div>
+        </div>
+        <div class="card bg-warning">
+          <div class="card-body text-center">
+            <button input type="button" class="tn btn-primary btn-lg" onclick="window.location.href ='cikiszili'">Çıkış Zili</button>
+          </div>
         </div>
       </div>
-      <div class="card bg-primary">
-        <div class="card-body text-center">
-          <button input type="button" class="btn btn-warning" onclick="window.location.href ='ogretmenzilical'">Öğretmen Zili</button>
-        </div>
       </div>
-      <div class="card bg-warning">
-        <div class="card-body text-center">
-          <button input type="button" class="btn btn-danger" onclick="window.location.href ='cikiszili'">Çıkış Zili</button>
-        </div>
-      </div>
-    </div>
-
+      <br> 
+    
     <form action="{% url 'hemencal' %}" method="POST">
     {% csrf_token %}
+
+    <div class="card">
+      <div class="card-header">
+       İstiklal Marşı
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <select class="textbox1" name="istiklal" size="1">
+            <option value="1">İstiklal Marşı</option>
+            </select> 
+            <button input type="button" class="tn btn-primary btn-lg" onclick="window.location.href ='istiklalmarsi'">Çal</button>
+            <b style=padding-left:30px;>Ses Dosyası: </b><input type="file" id="customFile" accept="audio/*" /> 
+        </div>
+      </div>
+      </div>
+    <br>
+
+    <div class="card">
+      <div class="card-header">
+       Saygı Duruşu  ve İstiklal Marşı
+      </div>
+      
+      <div class="card">
+        <div class="card-body">
+          <select class="textbox1" name="saygi" size="1">
+            <option value="1">1 Dakika Saygı Duruşu</option>
+            <option value="2">2 Dakika Saygı Duruşu</option>
+          </select>
+          <button input type="button" class="tn btn-primary btn-lg" onclick="window.location.href ='saygidurusu1'">Çal</button>  
+          <b style=padding-left:30px;>Ses Dosyası: </b><input type="file" id="customFile" accept="audio/*"/>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    <div class="card">
+      <div class="card-header">
+       Siren
+      </div>
+      
+      <div class="card">
+        <div class="card-body">
+          <div class="card">
+            <div class="card-body">
+              <select class="textbox1" name="siren" size="1">
+                <option value="1">30 Saniye Siren</option>
+                </select> 
+                <button input type="button" class="tn btn-primary btn-lg" onclick="window.location.href ='siren'">Çal</button>  
+                <b style=padding-left:30px;>Ses Dosyası: </b><input type="file" id="customFile" accept="audio/*" />
+            </div>
+          </div>
+      </div>
+      </div>
+    </div>
+    <br>
     
     <div class="card">
       <div class="card-body">
-        <select class="textbox1" name="istiklal" size="1">
-          <option value="1">İstiklal Marşı</option>
-          </select> 
-          <button input type="button" class="btn btn-primary" onclick="window.location.href ='istiklalmarsi'">Çal</button>
-          <b style=padding-left:30px;>Ses Dosyası: </b><input type="file" id="customFile" /> 
-      </div>
-    </div>
-    <br>
-    <div class="card">
-      <div class="card-body">
-        <select class="textbox1" name="saygi" size="1">
-          <option value="1">1 Dakika Saygı Duruşu</option>
-          <option value="2">2 Dakika Saygı Duruşu</option>
-        </select>
-        <button input type="button" class="btn btn-success" onclick="window.location.href ='saygidurusu1'">Çal</button>  
-        <b style=padding-left:30px;>Ses Dosyası: </b><input type="file" id="customFile" />
-      </div>
-    </div>
-    <br>
-    <div class="card">
-      <div class="card-body">
-        <select class="textbox1" name="siren" size="1">
-          <option value="1">30 Saniye Siren</option>
-          </select> 
-          <button input type="button" class="btn btn-warning" onclick="window.location.href ='siren'">Çal</button>  
-          <b style=padding-left:30px;>Ses Dosyası: </b><input type="file" id="customFile" />
-      </div>
-    </div>
-    <br>
-    
-    <div class="card">
-      <div class="card-body">
+        <center>
         <label for="vehicle1"> Ses Düzeyi </label><br>
          <input type="range" id="sesseviyesi" name="sesseviyesi" min="1" max="100"  oninput="this.nextElementSibling.value = this.value">
          <output>50</output>
-   <button input type="submit" class="button" onclick="window.location.href ='durdur'">Durdur</button>  
-      </form>    
+        </center>
       </div>
     </div>
+    <br>
+    <center>
+      <button input type="submit" class="tn btn-primary btn-lg" onclick="window.location.href ='durdur'">Durdur</button> 
+    </center>
 
-   
-  </form>
-  
+  </form>  
   </div>
 </div>
-
   
-
-
 {% endblock %}
 
 

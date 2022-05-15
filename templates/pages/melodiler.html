@@ -4,63 +4,99 @@
 {% block content %}
 
 <div class="card">
-  <h1 align="center" class="card-header">Melodi ve Anons Sesleri</h1>
+  <h4 align="center" class="card-header">Öğrenci Zili, Öğretmen Zili ve Çıkış Ziline ait melodi ve anons bilgileri düzenlenir .</h4>
   <div class="card-body">
+
     <div class="card">
+      <div class="card-header">
+       Öğrenci Zili
+      </div>
       <div class="card-body">
-          <select class=textbox1 name=hemen size=1>
-            <option value=1>Melodi1.mp3</option>
-            <option value=2>Melodi2.mp3</option>
-          </select>
-              <b style=padding-left:30px;>Melodi Ses Dosyası: </b><input type="file" id="customFile" />   
-        <br><input type=checkbox id=vehicle1 name=vehicle1 value=Bike checked="True">
-        <label for=vehicle1>Anons Kullan</label>
-        <b style=padding-left:50px;>Anons Ses Dosyası: </b><input type="file" id="customFile" />
-        <br>
-        <input type=checkbox id=vehicle2 name=vehicle2 value=Car>
-        <label for=vehicle2> 1.Ders Hariç Diğerlerinde Anons Kullan<br></label>
+        <select class="form-select" name="hemen" size="1">
+          <option value="1">Melodi1.mp3</option>
+          <option value="2">Melodi2.mp3</option>
+      </select>
+      
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
+        <label class="form-check-label" for="flexCheckDefault">
+          Anons Kullan
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
+        <label class="form-check-label" for="flexCheckChecked">
+          1. Ders Hariç
+        </label>
+      </div>
+
+      <div class="form-group">
+        <label for="exampleFormControlFile1">Melodi Ses Dosyası: </label>
+        <input type="file" class="form-control-file" id="exampleFormControlFile1" accept="audio/*">
+      </div> 
+      <div class="form-group">
+        <label for="exampleFormControlFile1">Anons Ses Dosyası: </label>
+        <input type="file" class="form-control-file" id="exampleFormControlFile1" accept="audio/*">
+      </div> 
       </div>
     </div>
     <br>   
-      <div class="card">
-        <div class="card-body">
-          <select class=textbox1 name=hemen size=1>
-            <option value=1>Melodi1.mp3</option>
-            <option value=2>Melodi2.mp3</option>
-        </select>
-        <b style=padding-left:30px;>Melodi Ses Dosyası: </b><input type="file" id="customFile" /> 
-        <br><input type=checkbox id=vehicle1 name=vehicle1 value=Bike checked="True">
-        <label for=vehicle1>Anons Kullan</label>
-        <b style=padding-left:50px;>Anons Ses Dosyası: </b><input type="file" id="customFile" />
-        <br>
-        <input type=checkbox id=vehicle2 name=vehicle2 value=Car>
-        <label for=vehicle2>1.Ders Hariç Diğerlerinde Anons Kullan</label><br>
-        </div>
+
+    <div class="card">
+      <div class="card-header">
+       Öğretmen Zili
       </div>
-      <br>
-      <div class="card">
-        <div class="card-body">
-          
-            <select class=textbox1 name=hemen size=1>
-               <option value=1>Melodi1.mp3</option>
-               <option value=2>Melodi2.mp3</option>
-            </select>
-            <b style=padding-left:80px;>Ses Dosyası: </b><input type="file" id="customFile" /> 
-        </div>
+      <div class="card-body">
+        <select class="form-select" name="hemen" size="1">
+          <option value="1">Melodi1.mp3</option>
+          <option value="2">Melodi2.mp3</option>
+      </select>
+      
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
+        <label class="form-check-label" for="flexCheckDefault">
+          Anons Kullan
+        </label>
       </div>
-      <br>
-      <div class="card">
-        <div class="card-body">
-          <label for="vehicle1"> Ses Düzeyi </label><br>
-          <input type="range" id="sesseviyesi" name="sesseviyesi" min="1" max="100"  oninput="this.nextElementSibling.value = this.value">
-          <output>50</output>
-          <button input type="submit" class="button" onclick="window.location.href ='durdur'">Durdur</button>  
-        </form>    
-        </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+        <label class="form-check-label" for="flexCheckChecked">
+          1. Ders Hariç
+        </label>
+
+      <div class="form-group">
+        <label for="exampleFormControlFile1">Melodi Ses Dosyası: </label>
+        <input type="file" class="form-control-file" id="exampleFormControlFile1" accept="audio/*">
+      </div> 
+      <div class="form-group">
+        <label for="exampleFormControlFile1">Anons Ses Dosyası: </label>
+        <input type="file" class="form-control-file" id="exampleFormControlFile1" accept="audio/*">
+      </div> 
+      </div>
+    </div> 
+    
+    </div>
+    <br>   
+    <div class="card">
+      <div class="card-header">
+        Çıkış Zili
+      </div>
+      <div class="card-body">
+        <select class="form-select" name="hemen" size="1">
+          <option value="1">Melodi1.mp3</option>
+          <option value="2">Melodi2.mp3</option>
+       </select>
+       <div class="form-group">
+        <label for="exampleFormControlFile1">Melodi Ses Dosyası:</label>
+        <input type="file" class="form-control-file" id="exampleFormControlFile1" accept="audio/*">
+      </div> 
       </div>
     </div>
     </div>
-   
+          <center>
+            <button input type="submit" class="btn btn-primary btn-lg" >Kaydet</button>  
+          </center>  
+          <br> 
 </div>
 
 {% endblock %}
