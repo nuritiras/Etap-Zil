@@ -3,55 +3,45 @@
 
 {% block content %}
 
-<div class="kutu">
-  
-    <aside id="info-block">
-        <section class="file-markersaat">
-          <div>
-            <div class="box-title">
-              Ders Giriş-Çıkış Saatleri
-            </div>
-            <form action="{% url 'saatler' %}" method="POST">
-              {% csrf_token %}
-            <div class="box-contents"><br>
-                <b class="yazi">&nbsp&nbsp;&nbsp;Öğrenci Zili</b><b class="yazi">Öğretmen Zili</b> <b class="yazi">Çıkış Zili</b><br>
-                {% for kategori in girisCikisSaatleri %}
-                  &nbsp;&nbsp;&nbsp;{{ kategori.dersSaati }}:<input class="sessa" type="time" id="ogrenci{{ kategori.id }}" name="ogrenci{{ kategori.id }}" value="{{ kategori.ogrenci }}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  <input class="sessa" type="time" id="ogretmen{{ kategori.id }}" name="ogretmen{{ kategori.id }}" value="{{ kategori.ogretmen }}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  <input class="sessa" type="time" id="cikis{{ kategori.id }}" name="cikis{{ kategori.id }}" value="{{ kategori.cikis }}"><br>
-                {% endfor %}   
-            </div>
+<div class="card" align="center">
+  <h1 align="center" class="card-header">Ders Giriş-Çıkış Saatleri</h1>
+  <div class="card-body" align="center">
+          <form action="{% url 'saatler' %}" method="POST">
+            {% csrf_token %}
+          <div class="box-contents"><br>
+              <b class="yazi">Öğrenci Zili</b> <b class="yazi">Öğretmen Zili</b> <b class="yazi">Çıkış Zili</b><br>
+              {% for kategori in girisCikisSaatleri %}
+                {{ kategori.dersSaati }}:<input class="sessa" type="time" id="ogrenci{{ kategori.id }}" name="ogrenci{{ kategori.id }}" value="{{ kategori.ogrenci }}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input class="sessa" type="time" id="ogretmen{{ kategori.id }}" name="ogretmen{{ kategori.id }}" value="{{ kategori.ogretmen }}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input class="sessa" type="time" id="cikis{{ kategori.id }}" name="cikis{{ kategori.id }}" value="{{ kategori.cikis }}"><br>
+              {% endfor %}   
           </div>
-        </section>
-      </aside>
-      <br>
-      <div class="kutu2">        
-        <div >
-          <label for="vehicle0"> Günler: </label>
-            <input type="checkbox" id="pazartesi" name="pazartesi" value="1" checked="True">
-            <label for="vehicle1"> Pzrt </label>
-            <input type="checkbox" id="sali" name="sali" value="2" checked="True">
-            <label for="vehicle2"> Salı&nbsp; </label>
-            <input type="checkbox" id="carsamba" name="carsamba" value="3" checked="True">
-            <label for="vehicle3"> Çrşmb&nbsp; </label>
-            <input type="checkbox" id="persembe" name="persembe" value="4" checked="True">
-            <label for="vehicle4"> Prşmb &nbsp;</label>
-            <input type="checkbox" id="cuma" name="cuma" value="5" checked="True">
-            <label for="vehicle5"> Cuma &nbsp;</label>
-            <input type="checkbox" id="cumartesi" name="cumartesi" value="6" checked="True">
-            <label for="vehicle6"> Cmrts &nbsp;</label>
-            <input type="checkbox" id="pazar" name="pazar" value="7" checked="True">
-            <label for="vehicle7"> Pazar</label>
-          </div> <br>
-          <label for="vehicle1"> Ses Düzeyi </label><br>
-       <input type="range" id="sesseviyesi" name="sesseviyesi" min=1 max=100 style="width: 330px" oninput="this.nextElementSibling.value = this.value">
-       <output>50</output>
-       <button input type="submit" class="button">Kaydet</button>
-      </form>   
-       </div><br> 
-    </div>
+      <div >
+        <label for="vehicle0"> Günler: </label>
+          <input type="checkbox" id="pazartesi" name="pazartesi" value="1" checked="True">
+          <label for="vehicle1"> Pzrt </label>
+          <input type="checkbox" id="sali" name="sali" value="2" checked="True">
+          <label for="vehicle2"> Salı&nbsp; </label>
+          <input type="checkbox" id="carsamba" name="carsamba" value="3" checked="True">
+          <label for="vehicle3"> Çrşmb&nbsp; </label>
+          <input type="checkbox" id="persembe" name="persembe" value="4" checked="True">
+          <label for="vehicle4"> Prşmb &nbsp;</label>
+          <input type="checkbox" id="cuma" name="cuma" value="5" checked="True">
+          <label for="vehicle5"> Cuma &nbsp;</label>
+          <input type="checkbox" id="cumartesi" name="cumartesi" value="6" checked="True">
+          <label for="vehicle6"> Cmrts &nbsp;</label>
+          <input type="checkbox" id="pazar" name="pazar" value="7" checked="True">
+          <label for="vehicle7"> Pazar</label>
+        </div> <br>
+        <label for="vehicle1"> Ses Düzeyi </label><br>
+     <input type="range" id="sesseviyesi" name="sesseviyesi" min="1" max="100" oninput="this.nextElementSibling.value = this.value">
+     <output>50</output>
+     <button input type="submit" class="button">Kaydet</button>
+    </form>   
+     </div><br> 
+  </div>
 </div>
-
+    
 {% endblock %}
 
 
