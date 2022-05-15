@@ -12,7 +12,7 @@
 <form action = "" method = "POST">
   {% csrf_token %}
   <label for="baslik"> Duyuru Konusu: {{ DuyuruMesaj.title }} </label> <br>
-  <textarea id="mesaj" name="mesaj" rows="10" cols="51">{{ DuyuruMesaj.description }}</textarea>
+  <textarea id="mesaj" class="form-control" id="mesaj" name="mesaj" rows="10">{{ DuyuruMesaj.description }}</textarea>
   <br><br>
   <button type="submit" class="btn btn-primary btn-block">Duyuru Yap</button>
   <br><br>
