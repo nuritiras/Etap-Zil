@@ -29,6 +29,8 @@ cd Etap-Zil
 pip install -r requirements.txt  
 python3 manage.py runserver 0.0.0.0:8000  
 
+http://ipadresiniz:8000  
+
 **Kullanıcı adı:** admin  
 **Şifre:** etap.2022  
 
