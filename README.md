@@ -16,7 +16,7 @@ Mevcut zil ve duyuru sistemlerinin, teknolojinin hızına ayak uydurması şekli
 
 **Öğrenciler:** Adem KARPUZ, Metehan GÖKYOKUŞ, Ali Nail ACAR
 
-**Kurulum:** 
+**Kurulum:**  
 mkdir etap  
 git clone  https://github.com/nuritiras/Etap-Zil.git  
 sudo apt install python3-pip  
