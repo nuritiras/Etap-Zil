@@ -16,8 +16,21 @@ Mevcut zil ve duyuru sistemlerinin, teknolojinin hızına ayak uydurması şekli
 
 **Öğrenciler:** Adem KARPUZ, Metehan GÖKYOKUŞ, Ali Nail ACAR
 
-**Kurulum:** pip install -r requirements.txt
+**Kurulum:** 
+mkdir etap
+git clone  https://github.com/nuritiras/Etap-Zil.git
+sudo apt install python3-pip
+sudo apt install python3-venv
+python3 -m venv env
+source env/bin/activate
+cd Etap-Zil
+pip install -r requirements.txt
+python3 manage.py runserver 0.0.0.0:8000
 
+**Kullanıcı adı:** admin
+**Şifre:** etap.2022
+
+**Kaynak:**
 https://gonullu.pardus.org.tr/pardus-21de-vscode-ile-python-gelistirme-ortaminin-hazirlanmasi/
 
 https://gonullu.pardus.org.tr/pardus-21-ile-python-django-kutuphanesine-giris/
