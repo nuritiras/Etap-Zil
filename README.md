@@ -18,6 +18,7 @@ Mevcut zil ve duyuru sistemlerinin, teknolojinin hızına ayak uydurması şekli
 
 **Kurulum:**  
 mkdir etap  
+cd etap  
 git clone  https://github.com/nuritiras/Etap-Zil.git  
 sudo apt install python3-pip  
 sudo apt install python3-venv  
