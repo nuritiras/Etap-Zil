@@ -28,18 +28,18 @@ def saatler(request):
     data = {
         "girisCikisSaatleri": SaatModel.objects.all()
     }
-
+    
     if request.method == 'POST':
-        sesseviyesi=request.POST['sesseviyesi']
-        # Tören:
         ogrenciDersZili={}
         ogretmenDersZili={}
         cikisDersZili={}
-        for i in range(1,16):
+        sesSeviyesi={}
+        for i in range(1,22):
             ogrenciDersZili[i] = request.POST['ogrenci'+str(i)]
             ogretmenDersZili[i] = request.POST['ogretmen'+str(i)]
             cikisDersZili[i] = request.POST['cikis'+str(i)]
-            SaatModel.objects.filter(id=i).update(ogrenci=ogrenciDersZili[i],ogretmen=ogretmenDersZili[i],cikis=cikisDersZili[i],sesDuzeyi=sesseviyesi)
+            sesSeviyesi[i]=request.POST['sesseviyesi'+str(i)]
+            SaatModel.objects.filter(id=i).update(ogrenci=ogrenciDersZili[i],ogretmen=ogretmenDersZili[i],cikis=cikisDersZili[i],sesDuzeyi=sesSeviyesi[i])
         messages.add_message(request, messages.SUCCESS, 'Giriş-çıkış ders saatleri ayarlandı.')    
     return render(request, 'pages/saatler.html',data)
 

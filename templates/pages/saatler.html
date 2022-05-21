@@ -9,35 +9,32 @@
           <form action="{% url 'saatler' %}" method="POST">
             {% csrf_token %}
           <div class="box-contents"><br>
-              <b class="yazi">Öğrenci Zili</b> <b class="yazi">Öğretmen Zili</b> <b class="yazi">Çıkış Zili</b><br>
+              <b>Ders</b> <b>Öğrenci Zili</b> <b>Öğretmen Zili</b> <b>Çıkış Zili</b> <b>Ses Düzeyi</b><br>
               {% for kategori in girisCikisSaatleri %}
-                {{ kategori.dersSaati }}:<input class="sessa" type="time" id="ogrenci{{ kategori.id }}" name="ogrenci{{ kategori.id }}" value="{{ kategori.ogrenci }}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <input class="sessa" type="time" id="ogretmen{{ kategori.id }}" name="ogretmen{{ kategori.id }}" value="{{ kategori.ogretmen }}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <input class="sessa" type="time" id="cikis{{ kategori.id }}" name="cikis{{ kategori.id }}" value="{{ kategori.cikis }}"><br>
-              {% endfor %}   
+                <label for="ders"> {{ kategori.dersSaati }}:</label><input type="time" id="ogrenci{{ kategori.id }}" name="ogrenci{{ kategori.id }}" value="{{ kategori.ogrenci }}">
+                <input type="time" id="ogretmen{{ kategori.id }}" name="ogretmen{{ kategori.id }}" value="{{ kategori.ogretmen }}">
+                <input type="time" id="cikis{{ kategori.id }}" name="cikis{{ kategori.id }}" value="{{ kategori.cikis }}">
+                <input type="range" id="sesseviyesi{{ kategori.id }}" name="sesseviyesi{{ kategori.id }}" min="0" max="100" value="{{ kategori.sesDuzeyi }}" oninput="this.nextElementSibling.value = this.value">
+                <output>{{ kategori.sesDuzeyi }}</output><br>
+                {% endfor %}   
           </div>
-      <div >
-        <label for="vehicle0"> Günler: </label>
-          <input type="checkbox" id="pazartesi" name="pazartesi" value="1" checked="True">
-          <label for="vehicle1"> Pzrt </label>
-          <input type="checkbox" id="sali" name="sali" value="2" checked="True">
-          <label for="vehicle2"> Salı&nbsp; </label>
-          <input type="checkbox" id="carsamba" name="carsamba" value="3" checked="True">
-          <label for="vehicle3"> Çrşmb&nbsp; </label>
-          <input type="checkbox" id="persembe" name="persembe" value="4" checked="True">
-          <label for="vehicle4"> Prşmb &nbsp;</label>
-          <input type="checkbox" id="cuma" name="cuma" value="5" checked="True">
-          <label for="vehicle5"> Cuma &nbsp;</label>
-          <input type="checkbox" id="cumartesi" name="cumartesi" value="6" checked="True">
-          <label for="vehicle6"> Cmrts &nbsp;</label>
-          <input type="checkbox" id="pazar" name="pazar" value="7" checked="True">
-          <label for="vehicle7"> Pazar</label>
-        </div> <br>
-        <label for="vehicle1"> Ses Düzeyi </label><br>
-     <input type="range" id="sesseviyesi" name="sesseviyesi" min="1" max="100" oninput="this.nextElementSibling.value = this.value">
-     <output>50</output>
-     <br><br>
-     <button input type="submit" class="btn btn-primary btn-lg"">Kaydet</button>
+          <div >
+              <input type="checkbox" id="pazartesi" name="pazartesi" value="1" checked="True">
+              <label for="gun1"> Pazartesi </label>
+              <input type="checkbox" id="sali" name="sali" value="2" checked="True">
+              <label for="gun2"> Salı </label>
+              <input type="checkbox" id="carsamba" name="carsamba" value="3" checked="True">
+              <label for="gun3"> Çarşamba </label>
+              <input type="checkbox" id="persembe" name="persembe" value="4" checked="True">
+              <label for="gun4"> Perşembe</label>
+              <input type="checkbox" id="cuma" name="cuma" value="5" checked="True">
+              <label for="gun5"> Cuma</label>
+              <input type="checkbox" id="cumartesi" name="cumartesi" value="6" checked="True">
+              <label for="gun6"> Cumartesi</label>
+              <input type="checkbox" id="pazar" name="pazar" value="7" checked="True">
+              <label for="gun7"> Pazar</label>
+          </div>
+        <button input type="submit" class="btn btn-primary btn-lg"">Kaydet</button>
     </form>   
      </div><br> 
   </div>

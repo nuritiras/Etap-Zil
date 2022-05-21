@@ -11,7 +11,7 @@
       <div class="card-header">
        Hemen Zil Çal
       </div>
-      <div class="card-columns">
+      <div class="card-deck">
         <div class="card bg-warning">
           <div class="card-body text-center">  
             <button input type="button" class="tn btn-primary btn-lg" onclick="window.location.href ='ogrencizilical'">Öğrenci Zili</button>
@@ -25,6 +25,11 @@
         <div class="card bg-warning">
           <div class="card-body text-center">
             <button input type="button" class="tn btn-primary btn-lg" onclick="window.location.href ='cikiszili'">Çıkış Zili</button>
+          </div>
+        </div>
+        <div class="card bg-warning">
+          <div class="card-body text-center">
+            <button input type="button" class="tn btn-primary btn-lg" onclick="window.location.href ='durdur'">Durdur</button>
           </div>
         </div>
       </div>
@@ -93,8 +98,8 @@
       <div class="card-body">
         <center>
         <label for="vehicle1"> Ses Düzeyi </label><br>
-         <input type="range" id="sesseviyesi" name="sesseviyesi" min="1" max="100"  oninput="this.nextElementSibling.value = this.value">
-         <output>50</output>
+         <input type="range" id="sesseviyesi" name="sesseviyesi" min="0" max="100" value="100"  oninput="this.nextElementSibling.value = this.value">
+         <output>100</output>
         </center>
       </div>
     </div>
